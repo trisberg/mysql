@@ -4,3 +4,8 @@ resources:
   - mysql-pvc.yaml
   - mysql-deployment.yaml
   - mysql-service.yaml
+# TODO Switch to generating password for secret
+secretGenerator:
+  - name: mysql-secret
+    literals:
+      - mysql_password=ThePassword
