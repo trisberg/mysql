@@ -8,6 +8,6 @@ resources:
   - mysql-service.yaml
 # TODO Switch to generating password for secret
 secretGenerator:
-  - name: mysql-secret
+  - name: mysql
     literals:
       - mysql_password=ThePassword
