@@ -1,13 +1,6 @@
-generatorOptions:
-  disableNameSuffixHash: true
 commonLabels:
   app.kubernetes.io/name: mysql-default
 resources:
   - mysql-pvc.yaml
   - mysql-deployment.yaml
   - mysql-service.yaml
-# TODO Switch to generating password for secret
-secretGenerator:
-  - name: mysql
-    literals:
-      - mysql_password=ThePassword
